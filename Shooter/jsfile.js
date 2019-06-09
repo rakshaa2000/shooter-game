@@ -41,7 +41,9 @@ function Circle(rad,dy) {
 	this.dy=dy;
 	this.create=function(){
 		c1.beginPath();
-		c1.arc(this.x,this.y,this.rad,0,Math.PI*2,false);
+		if(this.rad>0){
+			c1.arc(this.x,this.y,this.rad,0,Math.PI*2,false);
+		}
 		c1.stroke();
 		c1.fillStyle="#ffff00";
 		c1.fill();
